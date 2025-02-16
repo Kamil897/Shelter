@@ -1,7 +1,6 @@
 import React from "react";
 import AnimalsCard from "../AnimalsCard/AnimalsCard";
 import DecryptedText from "../DecryptedText/DecryptedText";
-import PixelTransition from "../PixelTransition/PixelTransition"; 
 import s from "./Animals.module.scss";
 
 const pets = [
@@ -19,36 +18,15 @@ const pets = [
 const Animals = () => {
   return (
     <div className={s.petsContainer}>
-      <PixelTransition
-        firstContent={
-          <div className={s.imageWrapper}>
-            <img src="/about.png" alt="Charlie" className={s.dogImage} />
-            <h2 className={s.title}>
-              <DecryptedText text="OUR ANIMALS" animateOn="view" revealDirection="center" />
-            </h2>
-            <div className={s.textBox}>
-              <DecryptedText text="And now I'll introduce you to our pets" animateOn="view" revealDirection="center" />
-            </div>
-          </div>
-        }
-        secondContent={
-          <div
-            style={{
-              width: "100%",
-              height: "100%",
-              display: "grid",
-              placeItems: "center",
-              backgroundColor: "#111"
-            }}
-          >
-            <p style={{ fontWeight: 900, fontSize: "3rem", color: "#ffffff" }}>Meow!</p>
-          </div>
-        }
-        gridSize={12}
-        pixelColor="#ffffff"
-        animationStepDuration={0.4}
-        className="custom-pixel-card"
-      />
+      <div className={s.imageWrapper}>
+        <img src="/about.png" alt="Charlie" className={s.dogImage} />
+        <h2 className={s.title}>
+          <DecryptedText text="OUR ANIMALS" animateOn="view" revealDirection="center" />
+        </h2>
+        <div className={s.textBox}>
+          <DecryptedText text="And now I'll introduce you to our pets" animateOn="view" revealDirection="center" />
+        </div>
+      </div>
 
       <div className={s.petsGrid}>
         {pets.map((pet, index) => (
