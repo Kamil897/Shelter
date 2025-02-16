@@ -3,7 +3,7 @@ import { Route, Routes, useLocation } from 'react-router-dom';
 import './App.css';
 import Header from './Components/Header/Header';
 import MainPage from './Components/MainPage/MainPage';
-import PreLoader from './components/PreLoader/PreLoader';
+import PreLoader from "./components/PreLoader/PreLoader.jsx";
 import Footer from './Components/Footer/Footer';
 
 function App() {
