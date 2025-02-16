@@ -1,0 +1,64 @@
+.petsContainer {
+  text-align: center;
+  padding: 20px;
+
+  .imageWrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 150px;
+  }
+  
+  .dogImage {
+    width: 1100px;
+    height: 400px;
+    z-index: 1;
+  }
+  
+  .title {
+    z-index: 2;
+    position: absolute;
+    top: 80px;
+    right: 600px;
+    font-weight: 600;
+    font-size: 55px;
+    line-height: 116%;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: #283b40;
+
+    @media (max-width: 1441px) {
+      right: 500px;
+    }
+  }
+  
+  .textBox {
+    text-align: left;
+    z-index: 2;
+    position: absolute;
+    right: 400px;
+    bottom: 90px;
+    width: 690px;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 124%;
+    letter-spacing: 0.07em;
+    color: #283b40;
+
+    @media (max-width: 1441px) {
+      right: 200px;
+      width: 670px;
+    }
+}
+}
+
+.petsGrid {
+  max-width: 1366px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 25px;
+  padding: 10px;
+}

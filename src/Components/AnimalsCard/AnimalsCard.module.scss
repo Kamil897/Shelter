@@ -1,0 +1,46 @@
+.petCard {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.48);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+  width: 400px;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.petImage {
+  width: 400px;
+  object-fit: contain;
+}
+
+.petInfo {
+  padding: 10px;
+
+  h3 {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 56%;
+    color: #2b2b2e;
+  }
+
+  p {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 80%;
+    text-align: center;
+    color: #2b2b2e;
+  }
+}
+
+.petBreed {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 70%;
+    color: #2b2b2e;
+    opacity: 0.7;
+}
