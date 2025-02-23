@@ -3,7 +3,6 @@ import Animals from "../Animals/Animals";
 import Store from "../Store/Store";
 import ImageTrail from "../ImageTrail/Image_Trail";
 import DecryptedText from "../DecryptedText/DecryptedText";
-import SplashCursor from "../SplashCursor/SplashCursor";
 
 const benefits = [
   {
@@ -114,7 +113,6 @@ function MainPage () {
             <section className={s.Store}>
                 <Store />
             </section>
-            <SplashCursor />
         </div>
     )
 }

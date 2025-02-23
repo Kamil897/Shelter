@@ -1,5 +1,7 @@
 import s from "./Header.module.scss";
 import DecryptedText from "../DecryptedText/DecryptedText";
+import SplashCursor from "../SplashCursor/SplashCursor";
+
 
 function Header () {
     return (
@@ -25,7 +27,7 @@ function Header () {
           </li>
           <li className={s.dot}>•</li>
           <li>
-            <a href="#contact">
+            <a href="/404">
               <DecryptedText text="Contact" animateOn="view" revealDirection="center" />
             </a>
           </li>
@@ -53,6 +55,7 @@ function Header () {
           />
         </div>
       </div>
+      <SplashCursor />
       </>
     );
 }

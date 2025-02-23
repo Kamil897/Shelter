@@ -4,7 +4,6 @@ import { motion } from 'framer-motion'
 const styles = {
   wrapper: {
     display: 'inline-block',
-    whiteSpace: 'pre-wrap',
   },
   srOnly: {
     position: 'absolute',
