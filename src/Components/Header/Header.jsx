@@ -1,6 +1,6 @@
 import s from "./Header.module.scss";
 import DecryptedText from "../DecryptedText/DecryptedText";
-import SplashCursor from "../SplashCursor/SplashCursor";
+// import SplashCursor from "../SplashCursor/SplashCursor";
 
 
 function Header () {
@@ -55,7 +55,7 @@ function Header () {
           />
         </div>
       </div>
-      <SplashCursor />
+      {/* <SplashCursor /> */}
       </>
     );
 }

@@ -33,7 +33,7 @@
         z-index: 2;
         position: absolute;
         top: 80px;
-        right: 600px;
+        right: 500px ;
         font-weight: 600;
         font-size: 55px;
         line-height: 116%;
@@ -50,7 +50,7 @@
         text-align: left;
         z-index: 2;
         position: absolute;
-        right: 400px;
+        right: 240px;
         bottom: 70px;
         width: 690px;
         font-weight: 400;
@@ -145,7 +145,52 @@
   margin-bottom: 90px;
 }
 
-.Store {
-  border-bottom: 6px solid #f2968f;
-  box-shadow: 0 4px 17px rgba(0, 0, 0, 0.25);
+.volunteerGallery {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-decoration: none;
+  align-items: center;
+  height: 100vh; 
+  padding: 50px 0;
+
+  .galleryWrapper {
+    width: 100%;
+    height: 600px;
+    position: relative;
+    border: none; 
+  }
+
+  .volunteer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    width: 100%;
+    text-align: center;
+
+    .button {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #0056b3;
+      }
+
+      .icon {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
 }
+
