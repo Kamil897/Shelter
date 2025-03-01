@@ -6,7 +6,6 @@
   text-align: center;
   transition: transform 0.3s ease-in-out;
   cursor: pointer;
-  width: 400px;
 
   &:hover {
     transform: scale(1.05);
@@ -14,7 +13,7 @@
 }
 
 .petImage {
-  width: 400px;
+  width: 100%;
   object-fit: contain;
 }
 

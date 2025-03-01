@@ -4,7 +4,7 @@ import './App.css';
 import Header from './Components/Header/Header';
 import MainPage from './Components/MainPage/MainPage';
 import PreLoader from "./components/PreLoader/PreLoader.jsx";
-import Footer from './Components/Footer/Footer';
+import Footer from './Components/Footer/Footer.jsx';
 import NotFoundPage from './Components/NotFoundPage/NotFoundPage.jsx';
 
 function App() {
@@ -26,7 +26,7 @@ function App() {
           <Route path="/404" element={<NotFoundPage />} />
         </Routes>
       </Suspense>
-      {!isNotFoundPage && <Footer />}
+      {!isNotFoundPage && < Footer/>}
     </>
   );
 }

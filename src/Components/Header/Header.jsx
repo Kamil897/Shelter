@@ -4,30 +4,34 @@ import DecryptedText from "../DecryptedText/DecryptedText";
 
 
 function Header () {
+    const scrollToSection = (id) => {
+      document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+    };
+
     return (
       <>
       <nav className={s.navbar}>
         <ul>
           <li>
-            <a href="#about">
+            <a onClick={() => scrollToSection("about")}>
               <DecryptedText text="About Us" animateOn="view" revealDirection="center" />
             </a>
           </li>
           <li className={s.dot}>•</li>
           <li>
-            <a href="#animals">
+            <a onClick={() => scrollToSection("animals")}>
               <DecryptedText text="Our Animals" animateOn="view" revealDirection="center" />
             </a>
           </li>
           <li className={s.dot}>•</li>
           <li>
-            <a href="#store">
+            <a onClick={() => scrollToSection("store")}>
               <DecryptedText text="Our Store" animateOn="view" revealDirection="center" />
             </a>
           </li>
           <li className={s.dot}>•</li>
           <li>
-            <a href="/404">
+            <a onClick={() => scrollToSection("contacts")}>
               <DecryptedText text="Contact" animateOn="view" revealDirection="center" />
             </a>
           </li>
@@ -55,7 +59,6 @@ function Header () {
           />
         </div>
       </div>
-      {/* <SplashCursor /> */}
       </>
     );
 }

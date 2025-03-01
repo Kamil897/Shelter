@@ -1,10 +1,13 @@
 import s from "./MainPage.module.scss";
+import { useState, useEffect } from "react";
 import styled from 'styled-components';
 import Animals from "../Animals/Animals";
 import Store from "../Store/Store";
+import Contact from "../Contact/Contact";
 import ImageTrail from "../ImageTrail/Image_Trail";
 import DecryptedText from "../DecryptedText/DecryptedText";
 import CircularGallery from "../CircularGallery/CircularGallery";
+// import ScrollReveal from "../ScrollReveal/ScrollReveal";
 
 const benefits = [
   {
@@ -31,9 +34,23 @@ const benefits = [
 ];
 
 function MainPage () {
+  const [isHidden, setIsHidden] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsHidden(window.innerWidth <= 1441);
+    };
+  
+    window.addEventListener("resize", handleResize);
+    handleResize();
+  
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
+    
       <div className={s.Wrapper}>
-          <section className={s.aboutUs}>
+          <section className={s.aboutUs} id="about">
               <div className={s.imageWrapper}>
                   <img src="/about.png" alt="Charlie the dog" className={s.dogImage} />
                   <h2 className={s.title}>
@@ -49,10 +66,11 @@ function MainPage () {
               </div>
 
               {benefits.map((benefit, index) => (
+                
                   <div key={benefit.id} className={s.benefit}>
                       <div
                           className={s.number}
-                          style={{ backgroundColor: benefit.color, left: index % 2 === 0 ? "170px" : "1250px"}}
+                          style={{ backgroundColor: benefit.color, left: isHidden ? "auto" : index % 2 === 0 ? "170px" : "1250px", display: isHidden ? "none" : "flex"}}
                       >
                           <DecryptedText text={String(benefit.id)} animateOn="view" revealDirection="center" />
                       </div>
@@ -87,7 +105,7 @@ function MainPage () {
           </section>
 
 
-            <section className={s.Animals}>
+            <section className={s.Animals}  id="animals">
                 <Animals />
             </section>
 
@@ -113,7 +131,7 @@ function MainPage () {
                 />
             </div>
 
-            <section className={s.Store}>
+            <section className={s.Store}  id="store">
                 <Store />
             </section>
 
@@ -145,7 +163,9 @@ function MainPage () {
               </div>
             </section>
 
-
+            <section className={s.Contact}  id="contacts">
+              <Contact/>
+            </section>
         </div>
     )
 }
@@ -158,6 +178,7 @@ const StyledWrapper = styled.div`
     padding-block: 0.5rem;
     padding-inline: 1.25rem;
     background-color: rgb(0 107 179);
+    text-decoration: none;
     border-radius: 9999px;
     display: flex;
     align-items: center;
