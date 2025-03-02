@@ -12,22 +12,22 @@ import CircularGallery from "../CircularGallery/CircularGallery";
 const benefits = [
   {
     id: 1,
-    title: "MENTALLY HEALTHY",
-    text: "For many people, especially those who are lonely, having a pet can be a valuable source of comfort and company. Renting a pet gives lonely people the opportunity to enjoy the presence and love of a pet, which can significantly increase their mood and well-being at such a difficult time.",
+    title: "Помощь людям и животным",
+    text: "Наш проект создан, чтобы спасать животных и поддерживать приюты. Мы помогаем питомцам найти любящих хозяев, а людям — обрести верных друзей.",
     image: "/about_dog.jpg",
     color: "#dec1e9",
   },
   {
     id: 2,
-    title: "ANIMAL SOCIALIZATION",
-    text: "Many pets need to socialize and interact with people and other animals to be happy and healthy. Renting pets also helps those animals that are looking for a permanent home. While they are on rent, they receive care, attention and the opportunity to show their best qualities to potential adopters. This can significantly increase the chances of their successful adaptation and a happy life in a new home.",
+    title: "СОЦИАЛИЗАЦИЯ ЖИВОТНЫХ",
+    text: "Многие животные нуждаются в заботе и общении, чтобы стать более доверчивыми и адаптированными. Мы создаем условия, где они получают внимание, любовь и шанс на новую жизнь в семье.",
     image: "/about_cat.jpg",
     color: "#7383d9",
   },
   {
     id: 3,
-    title: "CONVENIENCE",
-    text: "You choose your own rental period and schedule, convenient for you. All you need is to pick up your pet and enjoy a temporary companion. Renting allows you to enjoy the wonderful world of animals. You can gain valuable experience and understand whether a particular animal species suits you.",
+    title: "ПОДДЕРЖКА ПРИЮТОВ",
+    text: "Приюты ежедневно борются за спасение бездомных животных, и наша цель — помочь им в этом. Мы организуем сборы, обеспечиваем необходимыми ресурсами и привлекаем волонтеров.",
     image: "/dog_cat.jpg",
     color: "#c97e54",
   },
@@ -54,11 +54,11 @@ function MainPage () {
               <div className={s.imageWrapper}>
                   <img src="/about.png" alt="Charlie the dog" className={s.dogImage} />
                   <h2 className={s.title}>
-                      <DecryptedText text="ABOUT US" animateOn="view" revealDirection="center" />
+                      <DecryptedText text="О нас" animateOn="view" revealDirection="center" />
                   </h2>
                   <div className={s.textBox}>
                       <DecryptedText 
-                          text="My name is Charlie and I’m going to tell you about our project!" 
+                          text="Меня зовут Чарли, и я расскажу вам о нашем проекте!" 
                           animateOn="view" 
                           revealDirection="center" 
                       />

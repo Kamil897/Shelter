@@ -8,7 +8,7 @@ const Contact = () => {
       <div className={s.imageWrapper}>
         <img src="/about.png" alt="Charlie" className={s.dogImage} />
         <h2 className={s.title}>
-          <DecryptedText text="CONTACTS" animateOn="view" revealDirection="center" />
+          <DecryptedText text="Контакты" animateOn="view" revealDirection="center" />
         </h2>
         <div className={s.textBox}>
           <DecryptedText 

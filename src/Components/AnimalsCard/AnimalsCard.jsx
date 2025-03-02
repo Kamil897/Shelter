@@ -6,7 +6,7 @@ const AnimalsCard = ({ pet }) => {
     <div className={s.petCard}>
       <img src={pet.image} alt={pet.name} className={s.petImage} />
       <div className={s.petInfo}>
-        <h3>{pet.name} ({pet.gender})</h3>
+        <h3>{pet.name}</h3>
         <p>{pet.age} {pet.age > 1 ? "years" : "year"}</p>
         <p className={s.petBreed}>{pet.breed}</p>
       </div>

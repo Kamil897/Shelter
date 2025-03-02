@@ -14,25 +14,25 @@ function Header () {
         <ul>
           <li>
             <a onClick={() => scrollToSection("about")}>
-              <DecryptedText text="About Us" animateOn="view" revealDirection="center" />
+              <DecryptedText text="О нас" animateOn="view" revealDirection="center" />
             </a>
           </li>
           <li className={s.dot}>•</li>
           <li>
             <a onClick={() => scrollToSection("animals")}>
-              <DecryptedText text="Our Animals" animateOn="view" revealDirection="center" />
+              <DecryptedText text="Наши питомцы" animateOn="view" revealDirection="center" />
             </a>
           </li>
           <li className={s.dot}>•</li>
           <li>
             <a onClick={() => scrollToSection("store")}>
-              <DecryptedText text="Our Store" animateOn="view" revealDirection="center" />
+              <DecryptedText text="Наш магазин" animateOn="view" revealDirection="center" />
             </a>
           </li>
           <li className={s.dot}>•</li>
           <li>
             <a onClick={() => scrollToSection("contacts")}>
-              <DecryptedText text="Contact" animateOn="view" revealDirection="center" />
+              <DecryptedText text="Контакты" animateOn="view" revealDirection="center" />
             </a>
           </li>
         </ul>
@@ -41,9 +41,9 @@ function Header () {
       <div className={s.hero}>
         <div className={s.content}>
           <h1>
-            <DecryptedText text="Happiness is closer" animateOn="view" revealDirection="center" />
+            <DecryptedText text="Счастье ближе," animateOn="view" revealDirection="center" />
             <br />
-            <DecryptedText text="than you think" animateOn="view" revealDirection="center" />
+            <DecryptedText text="чем кажется!" animateOn="view" revealDirection="center" />
           </h1>
           <button className={s.button}>
             <DecryptedText text="Let's Go!" animateOn="view" revealDirection="center" />

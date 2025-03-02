@@ -1,7 +1,17 @@
+@font-face {
+  font-family: 'Lobster';
+  src: url('/fonts/Lobster-Regular.woff') format("woff");
+  font-display: swap;
+}
+
+body {
+  font-family: "Lobster", sans-serif;
+}
+
 .Wrapper {
   background-image: url(/paper.jpg);
   background-repeat: repeat;
-  background-size: contain
+  background-size: contain;
 }
 
 .aboutUs {
