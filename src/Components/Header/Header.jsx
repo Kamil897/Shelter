@@ -1,7 +1,5 @@
 import s from "./Header.module.scss";
 import DecryptedText from "../DecryptedText/DecryptedText";
-// import SplashCursor from "../SplashCursor/SplashCursor";
-
 
 function Header () {
     const scrollToSection = (id) => {
@@ -41,13 +39,8 @@ function Header () {
       <div className={s.hero}>
         <div className={s.content}>
           <h1>
-            <DecryptedText text="Счастье ближе," animateOn="view" revealDirection="center" />
-            <br />
-            <DecryptedText text="чем кажется!" animateOn="view" revealDirection="center" />
+            <DecryptedText text="Счастье ближе, чем кажется!" animateOn="view" revealDirection="center" />
           </h1>
-          <button className={s.button}>
-            <DecryptedText text="Let's Go!" animateOn="view" revealDirection="center" />
-          </button>
         </div>
         <div className={s.backgroundShapes}>
           <div className={s.circlePink}></div>

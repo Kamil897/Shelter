@@ -7,7 +7,7 @@ import Contact from "../Contact/Contact";
 import ImageTrail from "../ImageTrail/Image_Trail";
 import DecryptedText from "../DecryptedText/DecryptedText";
 import CircularGallery from "../CircularGallery/CircularGallery";
-// import ScrollReveal from "../ScrollReveal/ScrollReveal";
+import ClickSpark from "../ClickSpark/ClickSpark";
 
 const benefits = [
   {
@@ -48,124 +48,133 @@ function MainPage () {
   }, []);
 
   return (
-    
       <div className={s.Wrapper}>
-          <section className={s.aboutUs} id="about">
-              <div className={s.imageWrapper}>
-                  <img src="/about.png" alt="Charlie the dog" className={s.dogImage} />
-                  <h2 className={s.title}>
-                      <DecryptedText text="О нас" animateOn="view" revealDirection="center" />
-                  </h2>
-                  <div className={s.textBox}>
-                      <DecryptedText 
-                          text="Меня зовут Чарли, и я расскажу вам о нашем проекте!" 
-                          animateOn="view" 
-                          revealDirection="center" 
-                      />
-                  </div>
+        <ClickSpark
+          sparkColor='#fff'
+          sparkSize={35}
+          sparkRadius={20}
+          sparkCount={8}
+          duration={650}
+        >
+
+            <section className={s.aboutUs} id="about">
+                <div className={s.imageWrapper}>
+                    <img src="/about.png" alt="Charlie the dog" className={s.dogImage} />
+                    <h2 className={s.title}>
+                        <DecryptedText text="О нас" animateOn="view" revealDirection="center" />
+                    </h2>
+                    <div className={s.textBox}>
+                        <DecryptedText 
+                            text="Меня зовут Чарли, и я расскажу вам о нашем проекте!" 
+                            animateOn="view" 
+                            revealDirection="center" 
+                        />
+                    </div>
+                </div>
+
+                {benefits.map((benefit, index) => (
+                  
+                    <div key={benefit.id} className={s.benefit}>
+                        <div
+                            className={s.number}
+                            style={{ backgroundColor: benefit.color, left: isHidden ? "auto" : index % 2 === 0 ? "170px" : "1250px", display: isHidden ? "none" : "flex"}}
+                        >
+                            <DecryptedText text={String(benefit.id)} animateOn="view" revealDirection="center" />
+                        </div>
+
+                        <div 
+                            className={s.content} 
+                            style={{ flexDirection: index % 2 === 0 ? "row" : "row-reverse" }}
+                        >
+                            <div
+                                className={s.image}
+                                style={{ backgroundImage: `url(${benefit.image})` }}
+                            />
+                            <div className={s.text}>
+                                <h2>
+                                    <DecryptedText 
+                                        text={benefit.title} 
+                                        animateOn="view" 
+                                        revealDirection="center"
+                                    />
+                                </h2>
+                                <p>
+                                    <DecryptedText 
+                                        text={benefit.text} 
+                                        animateOn="view" 
+                                        revealDirection="center"
+                                    />
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                ))}
+            </section>
+
+
+              <section className={s.Animals}  id="animals">
+                  <Animals />
+              </section>
+
+              <div style={{ height: '500px', position: 'relative', overflow: 'hidden'}}>
+                  <ImageTrail
+                      key="image-trail"
+                      items={[
+                          'https://s0.rbk.ru/v6_top_pics/media/img/6/17/346932244082176.webp',
+                          'https://avatars.mds.yandex.net/get-mpic/5242361/img_id1307181978180312129.jpeg/orig',
+                          'https://avatars.mds.yandex.net/i?id=5b10868bb42c3ff3821ec71af1cb0449_l-4770953-images-thumbs&n=13',
+                          'https://avatars.mds.yandex.net/i?id=015f42c7410f0563d2264b7b17787474b2dcfc3b-5516188-images-thumbs&n=13',
+                          'https://avatars.mds.yandex.net/i?id=cab2cd2fd7d4a93ea01ec38e01946078_l-5357509-images-thumbs&n=13',
+                          'https://avatars.mds.yandex.net/i?id=409c00831c1d3fb3c5e712e67597eb7bb31c923d-13268389-images-thumbs&n=13',
+                          'https://avatars.mds.yandex.net/i?id=a091a194ec373b787a986a95cebf3a1070ca11d8-8249078-images-thumbs&n=13',
+                          'https://avatars.mds.yandex.net/i?id=ae0521f7a56e37beaa15c3469ab4c338e350c501-4453150-images-thumbs&n=13',
+                          'https://priyot.vercel.app/house1.png',
+                          'https://priyot.vercel.app/house2.png',
+                          'https://priyot.vercel.app/house3.png',
+                          'https://priyot.vercel.app/house4.png',
+                          'https://priyot.vercel.app/house7.png',
+                      ]}
+                      variant={1}
+                  />
               </div>
 
-              {benefits.map((benefit, index) => (
-                
-                  <div key={benefit.id} className={s.benefit}>
-                      <div
-                          className={s.number}
-                          style={{ backgroundColor: benefit.color, left: isHidden ? "auto" : index % 2 === 0 ? "170px" : "1250px", display: isHidden ? "none" : "flex"}}
-                      >
-                          <DecryptedText text={String(benefit.id)} animateOn="view" revealDirection="center" />
-                      </div>
+              <section className={s.Store}  id="store">
+                  <Store />
+              </section>
 
-                      <div 
-                          className={s.content} 
-                          style={{ flexDirection: index % 2 === 0 ? "row" : "row-reverse" }}
-                      >
-                          <div
-                              className={s.image}
-                              style={{ backgroundImage: `url(${benefit.image})` }}
-                          />
-                          <div className={s.text}>
-                              <h2>
-                                  <DecryptedText 
-                                      text={benefit.title} 
-                                      animateOn="view" 
-                                      revealDirection="center"
-                                  />
-                              </h2>
-                              <p>
-                                  <DecryptedText 
-                                      text={benefit.text} 
-                                      animateOn="view" 
-                                      revealDirection="center"
-                                  />
-                              </p>
-                          </div>
-                      </div>
-                  </div>
-              ))}
-          </section>
+              <section className={s.volunteerGallery}>
+                <div className={s.galleryWrapper}>
+                  <CircularGallery bend={3} textColor="#ffffff" borderRadius={0.05} />
+                </div>
 
+                <div className={s.volunteer}>
+                  <h2>Стать волонтером</h2>
+                  <p>Хотите помочь приютам? Присоединяйтесь к нашей команде волонтеров!</p>
+                  <StyledWrapper>
+                    <a
+                      href="https://forms.gle/v99K38Q2wvRScR4EA"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="button"
+                    >
+                      Подать заявку
+                      <svg className="icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                          fillRule="evenodd"
+                          d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    </a>
+                  </StyledWrapper>
+                </div>
+              </section>
 
-            <section className={s.Animals}  id="animals">
-                <Animals />
-            </section>
+              <section className={s.Contact}  id="contacts">
+                <Contact/>
+              </section>
+            </ClickSpark>
 
-            <div style={{ height: '500px', position: 'relative', overflow: 'hidden'}}>
-                <ImageTrail
-                    key="image-trail"
-                    items={[
-                        'https://s0.rbk.ru/v6_top_pics/media/img/6/17/346932244082176.webp',
-                        'https://avatars.mds.yandex.net/get-mpic/5242361/img_id1307181978180312129.jpeg/orig',
-                        'https://avatars.mds.yandex.net/i?id=5b10868bb42c3ff3821ec71af1cb0449_l-4770953-images-thumbs&n=13',
-                        'https://avatars.mds.yandex.net/i?id=015f42c7410f0563d2264b7b17787474b2dcfc3b-5516188-images-thumbs&n=13',
-                        'https://avatars.mds.yandex.net/i?id=cab2cd2fd7d4a93ea01ec38e01946078_l-5357509-images-thumbs&n=13',
-                        'https://avatars.mds.yandex.net/i?id=409c00831c1d3fb3c5e712e67597eb7bb31c923d-13268389-images-thumbs&n=13',
-                        'https://avatars.mds.yandex.net/i?id=a091a194ec373b787a986a95cebf3a1070ca11d8-8249078-images-thumbs&n=13',
-                        'https://avatars.mds.yandex.net/i?id=ae0521f7a56e37beaa15c3469ab4c338e350c501-4453150-images-thumbs&n=13',
-                        'https://priyot.vercel.app/house1.png',
-                        'https://priyot.vercel.app/house2.png',
-                        'https://priyot.vercel.app/house3.png',
-                        'https://priyot.vercel.app/house4.png',
-                        'https://priyot.vercel.app/house7.png',
-                    ]}
-                    variant={1}
-                />
-            </div>
-
-            <section className={s.Store}  id="store">
-                <Store />
-            </section>
-
-            <section className={s.volunteerGallery}>
-              <div className={s.galleryWrapper}>
-                <CircularGallery bend={3} textColor="#ffffff" borderRadius={0.05} />
-              </div>
-
-              <div className={s.volunteer}>
-                <h2>Стать волонтером</h2>
-                <p>Хотите помочь приютам? Присоединяйтесь к нашей команде волонтеров!</p>
-                <StyledWrapper>
-                  <a
-                    href="https://forms.gle/v99K38Q2wvRScR4EA"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="button"
-                  >
-                    Подать заявку
-                    <svg className="icon" viewBox="0 0 24 24" fill="currentColor">
-                      <path
-                        fillRule="evenodd"
-                        d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </a>
-                </StyledWrapper>
-              </div>
-            </section>
-
-            <section className={s.Contact}  id="contacts">
-              <Contact/>
-            </section>
         </div>
     )
 }

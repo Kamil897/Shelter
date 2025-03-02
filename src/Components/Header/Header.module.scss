@@ -44,6 +44,7 @@
 }
 
 .hero {
+  height: 50vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
@@ -52,14 +53,15 @@
 
   .content {
     z-index: 2;
-
-    h1 {
-      margin-top: 300px;
-      margin-left: 160px;
+    
+    h1 {  
+      width: 1200px;
+      margin-bottom: 90px;
+      margin-left: 100px;
       font-weight: 400;
-      font-size: 50px;
+      font-size: 70px;
       line-height: 116%;
-      letter-spacing: 0.07em;
+      letter-spacing: 0.1em;
       color: #283c40;
 
       @media (max-width: 1290px) {
@@ -75,40 +77,6 @@
         font-size: 30px;
       }
     } 
-
-    .button {
-      margin-left: 160px;
-      margin-bottom: 106px;
-      background-color: #ff7f50;
-      border: none;
-      border-radius: 100px;
-      padding: 15px 150px 16px 150px;
-      font-weight: 400;
-      font-size: 27px;
-      color: #fcfcfc;
-      line-height: 116%;
-      letter-spacing: 0.07em;
-      cursor: pointer;
-      transition: background 0.3s;
-
-      @media (max-width: 1290px) {
-        padding: 13px 120px 14px 120px;
-      }
-
-      @media (max-width: 1024px) {
-        padding: 12px 100px;
-        font-size: 25px;
-      }
-
-      @media (max-width: 768px) {
-        margin-left: 100px;
-        font-size: 18px;
-      }
-      
-      &:hover {
-        background-color: #ff6347;
-      }
-    }
   }
 
   .backgroundShapes {
@@ -141,7 +109,7 @@
     .dogImage {
       position: absolute;
       right: 15%;
-      top: -202px;
+      top: -275px;
       z-index: 2;
 
       @media (max-width: 1290px) {

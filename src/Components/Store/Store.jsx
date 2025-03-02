@@ -41,9 +41,6 @@ export default function Store() {
               <div className={s.productType}>
                 <DecryptedText text={product.type} animateOn="view" revealDirection="center" />
               </div>
-              {/* <div className={s.productPrice}>
-                <DecryptedText text={product.price} animateOn="view" revealDirection="center" />
-              </div> */}
             </div>
 
             <div data-tooltip={`Price: $${product.price}`} className={s.button}>
