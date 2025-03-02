@@ -31,7 +31,7 @@ const Contact = () => {
         <input type="email" placeholder="E-mail" className={s.inputField} />
 
         <button type="submit" className={s.sendButton}>
-          <DecryptedText text="SEND" animateOn="view" revealDirection="center" />
+          <DecryptedText text="Отправить" animateOn="view" revealDirection="center" />
         </button>
       </form>
 
